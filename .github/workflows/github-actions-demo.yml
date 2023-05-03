@@ -29,3 +29,9 @@ jobs:
         run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+  Test:
+    run-on: ubuntu-latest
+    needs: [Build]
+    steps:
+      - run: |
+        echo "Testing..."
